@@ -1,7 +1,7 @@
 # GithubApp
 
 APK FILE:
-[![Google Play](https://logo-marque.com/wp-content/uploads/2020/11/Google-Play-Embleme.png){ width=50% }](https://exp-shell-app-assets.s3.us-west-1.amazonaws.com/android/%40elhoussineaitezouine/GithubApp-6f8bde7072094d15b3f23ac5ca1508e9-signed.apk)
+[![Google Play](https://www.freepnglogos.com/uploads/google-play-png-logo/new-get-it-on-google-play-png-logo-20.png)](https://exp-shell-app-assets.s3.us-west-1.amazonaws.com/android/%40elhoussineaitezouine/GithubApp-6f8bde7072094d15b3f23ac5ca1508e9-signed.apk)
 
 ## Requirements
 
