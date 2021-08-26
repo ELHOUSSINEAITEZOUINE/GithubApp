@@ -1,18 +1,14 @@
 import React from 'react';
 
-import { 
-    StyleSheet, 
-}  from 'react-native';
-
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 
-import { AntDesign } from '@expo/vector-icons';
 import { Entypo } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
 
 import HomeScreen from '../Screens/Home';
+import SettingsScreen from '../Screens/Settings';
 
 const Stack = createStackNavigator();
 
@@ -29,27 +25,20 @@ function StackHomeScreen({route, navigation}) {
     );
 }
 
-// const StackSearch = createStackNavigator();
+const StackSettings = createStackNavigator();
 
-// function StackSearchScreen() {
+function StackSettingsScreen() {
 
-//     return (
-//         <StackSearch.Navigator initialRouteName="Search">
-//             <StackSearch.Screen
-//                 name="Search"
-//                 component={SearchScreen}
-//                 options={{ title: 'Search', headerTitleStyle: { alignSelf: 'center' }, headerShown: false }}
-//             />
-//             <StackSearch.Screen
-//                 name="DetailMovie"
-//                 component={DetailMovieScreen}
-//                 options={{ title: 'DetailMovie', headerTitleStyle: { alignSelf: 'center' }, headerShown: false }}
-                
-//             />
-
-//         </StackSearch.Navigator>
-//     );
-// }
+    return (
+        <StackSettings.Navigator initialRouteName="Search">
+            <StackSettings.Screen
+                name="SettingsScreen"
+                component={SettingsScreen}
+                options={{ title: 'Settings', headerTitleStyle: { alignSelf: 'center' }, headerShown: true }}
+            />
+        </StackSettings.Navigator>
+    );
+}
 
 const Tab = createBottomTabNavigator();
 
@@ -61,7 +50,6 @@ const customTabBarStyle = {
         height: 55,
         backgroundColor: "#f7f6f6",
         borderTopWidth: 1,
-        // elevation: 20,
     }
 }
 
@@ -96,22 +84,14 @@ class TabNavigator extends React.Component {
                             title: 'Trending'
                         }}
                     />
-                    <Tab.Screen name="SearchTab" component={StackHomeScreen} 
+                    <Tab.Screen name="SearchTab" component={StackSettingsScreen} 
                         options={{
                             tabBarIcon: (item) => {
                                 return <Ionicons name="ios-settings-sharp" size={24} color={item.focused ? "#0076ff" : "#8e8e93"} />
                             },
-                            title: 'Settings'
+                            title: 'Settings',
                         }}
                     />
-                    {/* <Tab.Screen name="FavoritesTab" component={StackFavoritesScreen} 
-                        options={{
-                            tabBarIcon: (item) => {
-                                return <Feather name="heart" size={24} style={[styles.icon, {backgroundColor: item.focused ? Colors.backgroundIconTab : null}]}  color={item.focused ? Colors.ColorIconTab : Colors.ColorInactiveIconTab} />
-                            },
-                            headerShown: false
-                        }}
-                    /> */}
                 </Tab.Navigator>
             </NavigationContainer>
         );
@@ -119,10 +99,3 @@ class TabNavigator extends React.Component {
 }
 
 export default TabNavigator
-
-const styles = StyleSheet.create({
-    icon: {
-        // padding: 5,
-        // borderRadius: 6
-    }
-});
