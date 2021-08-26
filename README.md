@@ -1,8 +1,11 @@
 # GithubApp
 
+APK FILE:
+[![Google Play](https://logo-marque.com/wp-content/uploads/2020/11/Google-Play-Embleme.png)](https://exp-shell-app-assets.s3.us-west-1.amazonaws.com/android/%40elhoussineaitezouine/GithubApp-6f8bde7072094d15b3f23ac5ca1508e9-signed.apk)
+
 ## Requirements
 
-* Python : Download and install the latest Python windows installer package from Python.org .
+* Python : Download and install the latest Python windows installer package from https://python.org .
 * Nodejs (LTS) - doc: https://nodejs.org/en/
 * Expo cli - doc: https://docs.expo.dev/index.html
 
